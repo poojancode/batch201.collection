@@ -5,16 +5,11 @@ public class Product {
 	private int productID;
 	private String productName;
 	private int productQuantity;
-	private int productPrice;
+	private double productPrice;
 	private String mfgDate;
 	private String expDate;
-	
-	public Product() {
-		super();
-	}
 
-
-	public Product(int productID, String productName, int productQuantity, int productPrice, String mfgDate,
+	public Product(int productID, String productName, int productQuantity, double productprice,String mfgDate,
 			String expDate) {
 		super();
 		this.productID = productID;
@@ -56,7 +51,7 @@ public class Product {
 	}
 
 
-	public int getProductPrice() {
+	public double getProductPrice() {
 		return productPrice;
 	}
 
