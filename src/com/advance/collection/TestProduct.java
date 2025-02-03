@@ -11,7 +11,7 @@ public class TestProduct {
 		int choice=0;
 		do {
 			System.out.println("1.add product");
-			System.out.println("2.get specific product successfully");
+			System.out.println("2.get specific product");
 			System.out.println("3.get all product");
 			System.out.println("0.terminated ");
 			System.out.println();
@@ -29,12 +29,17 @@ public class TestProduct {
 		}
 		case 2:{
 			
-			System.out.println("pressed 2");
+			System.out.println("Enter product name to search: ");
+			String productName = sc.nextLine();
+			
+			Object perticularProduct = operation.getPerticularProduct(productName);
+			System.out.println(perticularProduct);
 			break;
 		}
 		case 3:{
 			
 			Object obj=operation.getAllProduct();
+			
 			if(obj instanceof String) {
 				System.out.println(obj);
 			}else {
