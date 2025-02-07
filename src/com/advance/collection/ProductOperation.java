@@ -8,8 +8,12 @@ public class ProductOperation {
 	List<Product>list=new ArrayList<Product>();
 	public String addProduct(Product product) {
 		
-		list.add(product);
+		for (Product p : list) {
+			if(p.getProductName().equalsIgnoreCase(product.getProductName()));
+			return "Product already exists";
+		}
 		
+		list.add(product);
 		return "Product added successfully";
 	}
 	
